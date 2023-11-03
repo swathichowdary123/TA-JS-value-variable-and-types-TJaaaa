@@ -39,3 +39,25 @@ let amount = 4280;
 // Declare another variable `addedAmount`. It's value should be 32 more than the value of amount.
 // Declare a variable `multipleAmount`. It's value should be 7 times the value of amount.
 // Declare a variable `dividedAmount`. It should store the resultant of amount divided by 57.
+
+alert(firstName);
+alert(lastName);
+firstName="John";
+lastName="Snow";
+fullName=firstName+lastName;
+alert(fullName);
+const fullName=firstName+" "+lastName;
+var name="your name";
+var newUser="name";
+var isAdmin=true;
+alert("name:");
+alert("newUser:"+newUser);
+alert("isAdmin:"+isAdmin);
+
+
+wiseMan="Samwell Tarly";
+var userName="Lysa Arryn";
+var oddNumber=57;
+oddNumber=61;
+
+
