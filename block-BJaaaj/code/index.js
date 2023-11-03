@@ -42,17 +42,17 @@ let amount = 4280;
 
 alert(firstName);
 alert(lastName);
-firstName="John";
-lastName="Snow";
-fullName=firstName+lastName;
-alert(fullName);
+ firstName="John";
+ lastName="Snow";
+ alert(firstName+lastName);
 const fullName=firstName+" "+lastName;
-var name="your name";
-var newUser="name";
-var isAdmin=true;
-alert("name:");
-alert("newUser:"+newUser);
-alert("isAdmin:"+isAdmin);
+let name,newUser,isAdmin;
+name="swathi";
+newUser=name;
+isAdmin=true;
+alert(name);
+alert(newUser);
+alert(isAdmin);
 
 
 wiseMan="Samwell Tarly";
@@ -60,4 +60,8 @@ var userName="Lysa Arryn";
 var oddNumber=57;
 oddNumber=61;
 
+let reducedAmount=amount-24;
+let addedAmount=amount+32;
+let multipleAmount=amount*7;
+let dividedAmount=amount/57;
 
