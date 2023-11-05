@@ -6,13 +6,12 @@
 4. Now change the value of `user` to `John` and log the value of both `user` and `userName`.
 */
 let user=Number(prompt("enter a number"));
+alert(user);
 let userName=user;
-console.log(`the value of user is ${user}`);
-let age=22;
-let isLearning=true;
+console.log(user,userName);
+let age=22 , isLearning=true;
 user="john";
-console.log(`the value of user is ${user}`);
-console.log(`the value of userName is ${userName}`);
+console.log(user,userName);
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`, using `+` operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
 */
@@ -25,32 +24,33 @@ alert(sum);
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
 
-for (let j = 0; j <= 10; j=j+1)
-{
-    if(j%2==0){
+for (let j = 0; j <= 10; j=j+2) {
     console.log(j);
-    }
 }
-
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
-for(i=9; i<=9; i=i-1){
+for(i=9; i>=9; i=i--){
 if(i%2!==0){
     console.log(i);
 }
 }
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-
+let result="";
 let number=5;
 while(number>=0){
-    console.log(number);
+    result+=number;
     number--;
 }
+console.log(num);
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
+let results=""
 let num=10;
-while(num>=0){
-    console.log(num);
+while(num>=0){ 
+    if(num%2===0){
+        results+=num;
+    }
     num--;
 }
+console.log(num);
 // Comparisoin
 
 /* 7. Take two value using prompt and store them in variables `num1` and `num2`. Check whether they are equal or not.
@@ -67,9 +67,9 @@ Example:
 */
 let num1=Number(prompt("enter first value"));
 let num2=Number(prompt("enter first value"));
-if(num1===num2){
-    alert("true");
+if(isNaN(num1) || isNaN(num2)){
+    alert(`enter a valid value`);
 }
 else{
-    alert("enter a valid value");
+    alert(num1==num2);
 }
