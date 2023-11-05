@@ -8,24 +8,24 @@
 */
 let number=Number(prompt("enter a number"));
 if(number%2===0){
-  alert("number is even")
+  alert(`number is even`);
 }
 else{
-  alert("number is odd")
+  alert(`number is odd`);
 }
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
 let num1=Number(prompt("enter first number"));
 let num2=Number(prompt("enter second number"));
 if(num1>num2){
-  alert("num1 is greater");
+  alert(`${num1} is greater`);
 }
 else{
-  alert("num2 is greater");
+  alert(`${num2} is greater`);
 }
 // 3. Convert the above code using`?` terniary operator
 let numOne=Number(prompt("enter first number"));
 let numTwo=Number(prompt("enter second number"));
-numOne > numTwo ? alert("num1 is greater"):alert("num2 is greater");
+numOne > numTwo ? alert(`${num1} is greater`):alert(`${num2} is greater`);
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
 
@@ -34,18 +34,19 @@ numOne > numTwo ? alert("num1 is greater"):alert("num2 is greater");
   - `else` print the message " All men must die"
 */
 let houseName=Number(prompt("enter the house name"));
-if(houseName="stark"){
-  alert("winter is coming");
+if(houseName==="stark"){
+  alert(`winter is coming`);
 }
-else if(houseName="lannister"){
-  alert("a lannister always pays his dept");
+else if(houseName==="lannister"){
+  alert(`a lannister always pays his dept`);
 }
 else{
-  alert("all men must die");
+  alert(`all men must die`);
 }
 
 // 5. Convert the above code using`?` terniary operator
-let houseName1=Number(prompt("enter the house name"));
+houseName==="stark" ? alert(`winter is coming`): houseName==="lannister" ?  alert(`a lannister always pays his dept`) : alert(`all men must die`);
+
 // Switch
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
@@ -97,20 +98,28 @@ switch(month){
   - `Salary > 50000` tax is 30 %
 
 */
-let salary=Number(prompt("enter the salary"));
-switch(salary){
-  case salary<=20000:
-     alert("tax is 10%");
+let salery=prompt("enter the salary");
+switch(true){
+  case salery<=20000:{
+    let taxedAmount = (salery*10)/100;
+    alert(`your hand in amount ${salery-taxedAmount}`);
      break;
-  case salary<=40000:
-    alert("tax is 20%");
+}
+
+  case salery<=40000:{
+    let taxedAmount=(salery*20)/100;
+    alert(`your hand in amount ${salery-taxedAmount}`);
     break;
-  case salary>50000:
-    alert("tax is 30%");
+}
+  case salery > 50000:{
+    let taxedAmount=(salery*30)/100;
+    alert(`your hand in amount ${salery-taxedAmount}`);
     break;
+}
   default:
     alert("no tax is counted");   
 }
+
 //  if..else vs switch
 
 /* 8.
@@ -137,15 +146,12 @@ switch(marks){
     case marks>30 && marks<50:
       alert("grade C");
       break;
-    case marks>0:
-      alert("grade D");
-      break;
     default:
-      alert("fail")  
+      alert("grade D");
 }
 let grade=Number(prompt("enter the marks"));
 if(marks>100){
-  alert("marks cant be greater thean 100");
+  alert(`marks cant be greater thean 100`);
 }
 else if(marks>80 && marks<100){
   alert("grade A");
@@ -156,12 +162,10 @@ else if(marks>50 && marks<80){
 else if(marks>30 && marks<50){
   alert("grade C");
 }
-else if(marks>0){
+else{
   alert("grade D");
 }
-else{
-  alert("fail");
-}
+
 /* 9. Weather app
 
   - Ask user to provide the condition of the weather outside by asking `What is the weather like outside?`
@@ -171,36 +175,36 @@ else{
   - If`freezing` alert`Get your sweeter on`
   - Anything else should alert`Not a valid input`
 */
-let weather=Number(prompt("what is the weather like outside"));
+let weather=prompt("what is the weather like outside");
 switch(weather){
-  case sunny:
-    alert("wear a t-shirt");
+  case "sunny":
+    alert(`wear a t-shirt`);
     break;
-  case rainy:
-    alert("dont forget t take your rain coat");
+  case "rainy":
+    alert(`dont forget t take your rain coat`);
     break;
-  case hot:
-    alert("get a hanky");
+  case "hot":
+    alert(`get a hanky`);
     break;
-  case freezing:
-    alert("get your sweeeter on");
+  case "freezing":
+    alert(`get your sweeeter on`);
     break;
   default:
-    alert("not a valid inupt");
+    alert(`not a valid inupt`);
 }
-let weatherApp=Number(prompt("what is the weather like outside"));
-if(weather=sunny){
-  alert("wear a t-shirt");
+let weatherApp=prompt("what is the weather like outside");
+if(weather="sunny"){
+  alert(`wear a t-shirt`);
 }
-else if(weather=rainy){
-  alert("dont forget t take your rain coat");
+else if(weather="rainy"){
+  alert(`dont forget t take your rain coat`);
 }
-else if(weather=hot){
-  alert("get a hanky");
+else if(weather="hot"){
+  alert(`get a hanky`);
 }
-else if(weather=freezing){
-  alert("get your sweeeter on");
+else if(weather="freezing"){
+  alert(`get your sweeeter on`);
 }
 else{
-  alert("not a valid inupt");
+  alert(`not a valid inupt`);
 }
