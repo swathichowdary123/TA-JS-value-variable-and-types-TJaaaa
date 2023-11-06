@@ -16,3 +16,17 @@ var amount = 0;
 // your code goes here
 
 // ⛑ Answer of the above will `$334.76`.
+totalPurchaseAmount=0;
+while(totalPurchaseAmount<bank_balance){
+    totalPurchaseAmount+=PHONE_PRICE;
+    if(totalPurchaseAmount<SPENDING_THRESHOLD){
+        totalPurchaseAmount+=ACCESSORY_PRICE;
+    }
+}
+totalPurchaseAmount+=totalPurchaseAmount*TAX_RATE;
+if(totalPurchaseAmount<=bank_balance){
+    console.log(`you can afford the purchase`);
+}
+else{
+    console.log(`you can not afford the purchase`);
+}
